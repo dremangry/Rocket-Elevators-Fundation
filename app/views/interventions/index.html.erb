@@ -1,0 +1,108 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @interventions.each do |intervention| %>
+      <tr>
+        <td><%= link_to 'Show', intervention %></td>
+        <td><%= link_to 'Edit', edit_intervention_path(intervention) %></td>
+        <td><%= link_to 'Destroy', intervention, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<section class='text-center'>
+
+<h1>Intervention form</h1>
+
+<div class="input-group mb-3 text-center" style="max-width: 400px;">
+  <div class="input-group-prepend">
+    <label class="input-group-text " for="inputGroupSelect01">Customers</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+<br>
+<br>
+<div class="input-group mb-3"style="max-width: 400px;" >
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Building</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+<br>
+<br>
+<div class="input-group mb-3"style="max-width: 400px;">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Battery</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+<br>
+<br>
+<div class="input-group mb-3"style="max-width: 400px;">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Column</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+<br>
+<br>
+<div class="input-group mb-3"style="max-width: 400px;">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Elevators</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+<br>
+<br>
+<div class="input-group mb-3"style="max-width: 400px;">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Employess</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+</section>
+
+<br>
+
+<%= link_to 'New Intervention', new_intervention_path %>
