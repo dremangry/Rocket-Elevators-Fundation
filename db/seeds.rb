@@ -4,37 +4,37 @@ require "faker"
 # Manually created employee users from excel sheet
 User.create(first_name: 'Mathieu', last_name: 'Houde', email: 'mathieu.houde@codeboxx.biz', password: "mh1234", password_confirmation: "mh1234")
 Employee.create(title: "Captain", user_id: 1)
-User.create(first_name: 'Patrick', last_name: 'Thibault', email: 'patrick.thibault@codeboxx.biz', password: "pt1234", password_confirmation: "pt1234")
-Employee.create(title: "Engineer", user_id: 2)
-User.create(first_name: 'Francis', last_name: 'Patry-Jessop', email: 'francis.patry-jessop@codeboxx.biz', password: "fpj1234", password_confirmation: "fpj1234")
-Employee.create(title: "Engineer", user_id: 3)
-User.create(first_name: 'Abdul', last_name: 'Akeeb', email: 'abdul.akeeb@codebozz.biz', password: "aa1234", password_confirmation: "aa1234")
-Employee.create(title: "Engineer", user_id: 4)
-User.create(first_name: 'David', last_name: 'Amyot', email: 'david.amyot@codeboxx.biz', password: "da1234", password_confirmation: "da1234")
-Employee.create(title: "Developer", user_id: 5)
-User.create(first_name: 'Thomas', last_name: 'Carrier', email: 'thomas.carrier@codeboxx.biz', password: "tc1234", password_confirmation: "tc1234")
-Employee.create(title: "Developer", user_id: 6)
-User.create(first_name: 'Timothy', last_name: 'Kleinerman', email: 'timothy.wever@codeboxx.biz', password: "tk1234", password_confirmation: "tk1234")
-Employee.create(title: "Developer", user_id: 7)
-User.create(first_name: 'Kiril', last_name: 'Derilus', email: 'kiril.kleinerman@codeboxx.biz', password: "kd1234", password_confirmation: "kd1234")
-Employee.create(title: "Developer", user_id: 8)
-User.create(first_name: 'Emmanuela', last_name: 'Houde', email: 'emmanuela.derilus@codeboxx.biz', password: "ed1234", password_confirmation: "ed1234")
-Employee.create(title: "Developer", user_id: 9)
-User.create(first_name: 'Marie-Ève', last_name: 'Goupil', email: 'marie-eve.goupil@codeboxx.biz', password: "meg1234", password_confirmation: "meg1234")
-Employee.create(title: "Developer", user_id: 10)
-User.create(first_name: 'Perry', last_name: 'Sawatsky', email: 'perry.sawatsky@codeboxx.biz', password: "ps1234", password_confirmation: "ps1234")
-Employee.create(title: "Developer", user_id: 11)
+# User.create(first_name: 'Patrick', last_name: 'Thibault', email: 'patrick.thibault@codeboxx.biz', password: "pt1234", password_confirmation: "pt1234")
+# Employee.create(title: "Engineer", user_id: 2)
+# User.create(first_name: 'Francis', last_name: 'Patry-Jessop', email: 'francis.patry-jessop@codeboxx.biz', password: "fpj1234", password_confirmation: "fpj1234")
+# Employee.create(title: "Engineer", user_id: 3)
+# User.create(first_name: 'Abdul', last_name: 'Akeeb', email: 'abdul.akeeb@codebozz.biz', password: "aa1234", password_confirmation: "aa1234")
+# Employee.create(title: "Engineer", user_id: 4)
+# User.create(first_name: 'David', last_name: 'Amyot', email: 'david.amyot@codeboxx.biz', password: "da1234", password_confirmation: "da1234")
+# Employee.create(title: "Developer", user_id: 5)
+# User.create(first_name: 'Thomas', last_name: 'Carrier', email: 'thomas.carrier@codeboxx.biz', password: "tc1234", password_confirmation: "tc1234")
+# Employee.create(title: "Developer", user_id: 6)
+# User.create(first_name: 'Timothy', last_name: 'Kleinerman', email: 'timothy.wever@codeboxx.biz', password: "tk1234", password_confirmation: "tk1234")
+# Employee.create(title: "Developer", user_id: 7)
+# User.create(first_name: 'Kiril', last_name: 'Derilus', email: 'kiril.kleinerman@codeboxx.biz', password: "kd1234", password_confirmation: "kd1234")
+# Employee.create(title: "Developer", user_id: 8)
+# User.create(first_name: 'Emmanuela', last_name: 'Houde', email: 'emmanuela.derilus@codeboxx.biz', password: "ed1234", password_confirmation: "ed1234")
+# Employee.create(title: "Developer", user_id: 9)
+# User.create(first_name: 'Marie-Ève', last_name: 'Goupil', email: 'marie-eve.goupil@codeboxx.biz', password: "meg1234", password_confirmation: "meg1234")
+# Employee.create(title: "Developer", user_id: 10)
+# User.create(first_name: 'Perry', last_name: 'Sawatsky', email: 'perry.sawatsky@codeboxx.biz', password: "ps1234", password_confirmation: "ps1234")
+# Employee.create(title: "Developer", user_id: 11)
 
-# Manually created simple users
-User.create(first_name: 'Alexandra', last_name: 'McPhee', email: 'alexandra.mcphee@gmail.com', password: "am1234")
-User.create(first_name: 'Andrew', last_name: 'Osman', email: 'andrew.osman@gmail.com', password: "ao1234")
-User.create(first_name: 'Carl', last_name: 'Boris', email: 'carl.boris@gmail.com', password: "cb1234")
-User.create(first_name: 'Stephanie', last_name: 'Smith', email: 'stephanie.smith@gmail.com', password: "ss1234")
+# # Manually created simple users
+# User.create(first_name: 'Alexandra', last_name: 'McPhee', email: 'alexandra.mcphee@gmail.com', password: "am1234")
+# User.create(first_name: 'Andrew', last_name: 'Osman', email: 'andrew.osman@gmail.com', password: "ao1234")
+# User.create(first_name: 'Carl', last_name: 'Boris', email: 'carl.boris@gmail.com', password: "cb1234")
+# User.create(first_name: 'Stephanie', last_name: 'Smith', email: 'stephanie.smith@gmail.com', password: "ss1234")
 
-# Generated simple user 25 times to be used as customers
-(16..40).each do |i|
-    User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: "password", password_confirmation: "password")
-end
+# # Generated simple user 25 times to be used as customers
+# (16..40).each do |i|
+#     User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: "password", password_confirmation: "password")
+# end
 
 # # Manually created quotes
 # Quote.create(building_type: "Residential", num_apts: 10, num_floors: 10, num_base: 10, product_line: "Premium", num_elev: 1, unit_price: "CA$12,345.00", elev_cost: "CA$12,345.00", install_fee: "CA$1,604.85", total_cost: "CA$13,949.85", created_at: Faker::Date.between(from: '2019-09-23', to: '2022-01-25'), company_name: Faker::Company.name, email: Faker::Internet.email)
@@ -77,28 +77,28 @@ end
 #     Lead.create!(full_name: Faker::Name.name, company_name: Faker::Company.name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone, project_name: Faker::FunnyName.two_word_name, project_description: Faker::Company.buzzword, department_in_charge_of_elevators: department_elevators.sample, message: Faker::ChuckNorris.fact, created_at: fakeDate, date_of_contact_request: fakeDate + rand(5..10).day)
 # }
 
-# Generating 75 addresses
-statuses = ["active", "inactive"]
-types = ["business", "billing", "shipping", "home"]
-soa = ["suite", "apartment"]
+# # Generating 75 addresses
+# statuses = ["active", "inactive"]
+# types = ["business", "billing", "shipping", "home"]
+# soa = ["suite", "apartment"]
  
-path = File.join(File.dirname(__FILE__), "./seeds/addresses-us-250.json")
-records = JSON.parse(File.read(path))
+# path = File.join(File.dirname(__FILE__), "./seeds/addresses-us-250.json")
+# records = JSON.parse(File.read(path))
  
-(0..99).each do |i|
-    address = records["addresses"][i]
-    if i >= 0 and i <= 24
-        entity = "customer"
-    elsif i >= 25 and i <= 99
-        entity = "building"
-    end
-    Address.create!(type_of_address: types.sample, status: statuses.sample, entity: entity, number_and_street: address["address1"], suite_or_apartment: soa.sample, city: address["city"], postal_code: address["postalCode"], country: "United States", state: address["state"], notes: Faker::Company.buzzword)
-end
+# (0..99).each do |i|
+#     address = records["addresses"][i]
+#     if i >= 0 and i <= 24
+#         entity = "customer"
+#     elsif i >= 25 and i <= 99
+#         entity = "building"
+#     end
+#     Address.create!(type_of_address: types.sample, status: statuses.sample, entity: entity, number_and_street: address["address1"], suite_or_apartment: soa.sample, city: address["city"], postal_code: address["postalCode"], country: "United States", state: address["state"], notes: Faker::Company.buzzword)
+# end
 
-# # Generating 25 customers connected with generated users
-(16..40).each do |i|
-    Customer.create!(customer_creation_date: Faker::Date.between(from: '2017-09-23', to: '2022-01-25'), user_id: i, company_name: Faker::Company.name, full_name_of_the_company_contact: Faker::Name.name, company_contact_phone: Faker::PhoneNumber.cell_phone, email_of_the_company_contact: Faker::Internet.safe_email, company_description: Faker::Company.buzzword, full_name_of_service_technical_authority: Faker::Name.name, technical_authority_phone_for_service: Faker::PhoneNumber.phone_number, technical_manager_email_for_service: Faker::Internet.email, address_id: i)
-end
+# # # Generating 25 customers connected with generated users
+# (16..40).each do |i|
+#     Customer.create!(customer_creation_date: Faker::Date.between(from: '2017-09-23', to: '2022-01-25'), user_id: i, company_name: Faker::Company.name, full_name_of_the_company_contact: Faker::Name.name, company_contact_phone: Faker::PhoneNumber.cell_phone, email_of_the_company_contact: Faker::Internet.safe_email, company_description: Faker::Company.buzzword, full_name_of_service_technical_authority: Faker::Name.name, technical_authority_phone_for_service: Faker::PhoneNumber.phone_number, technical_manager_email_for_service: Faker::Internet.email, address_id: i)
+# end
 
 # # Generating 75 buildings, connected with Customer
 # (1..75).each do |i|
