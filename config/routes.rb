@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :testing_buttons
   resources :interventions
   resources :leads  
   devise_for :users
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
   root "home#index"
   get "commercial",  to: "home#commercial"
   get "residential", to: "home#residential"
+  get "interventions", to: "interventions#index"
 
 
   resources :synthesized_messages
@@ -24,7 +26,16 @@ end
 
 Rails.application.routes.draw do
 
+  resources :testing_buttons
   get 'get_building_by_customer/:customer_id', to: 'interventions#get_building_by_customer'  
+
+  get 'get_battery_by_building/:building_id', to: 'interventions#get_battery_by_building'  
+
+  get 'get_column_by_battery/:battery_id', to: 'interventions#get_column_by_battery' 
+
+  get 'get_elevator_by_column/:column_id', to: 'interventions#get_elevator_by_column'  
+
+
   get '/building_search' => 'application#building_search'
 
  end

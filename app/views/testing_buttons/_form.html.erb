@@ -1,0 +1,17 @@
+<%= form_with(model: testing_button, local: true) do |form| %>
+  <% if testing_button.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(testing_button.errors.count, "error") %> prohibited this testing_button from being saved:</h2>
+
+      <ul>
+      <% testing_button.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

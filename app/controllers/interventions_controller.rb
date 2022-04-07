@@ -9,12 +9,21 @@ class InterventionsController < ApplicationController
   # GET /interventions/1 or /interventions/1.json
   def show
   end
-
+# 
   # GET /interventions/new
+  # get all database info ****************************************************
   def new
     @intervention = Intervention.new
     @customer = Customer.all
     @building = Building.all
+    @battery = Battery.all
+    @column = Column.all
+    @elevator = Elevator.all
+    @employee = Employee.all
+  end
+
+  def intervention_params
+    params.require(:interventions).permit(:author, :customer_id, :building_id, :battery_id, :column_id, :elevator_id, :report)
   end
 
   # GET /interventions/1/edit
@@ -147,6 +156,27 @@ class InterventionsController < ApplicationController
     @building = Building.where("customer_id = ?", params[:customer_id])
     respond_to do |format|
         format.json { render :json => @building }
+    end
+  end
+
+  def get_battery_by_building
+    @battery = Battery.where("building_id = ?", params[:building_id])
+    respond_to do |format|
+        format.json { render :json => @battery }
+    end
+  end
+
+  def get_column_by_battery
+    @column = Column.where("battery_id = ?", params[:battery_id])
+    respond_to do |format|
+        format.json { render :json => @column }
+    end
+  end
+
+  def get_elevator_by_column
+    @elevator = Elevator.where("column_id = ?", params[:column_id])
+    respond_to do |format|
+        format.json { render :json => @elevator }
     end
   end
 

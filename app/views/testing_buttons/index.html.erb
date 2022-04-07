@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Testing Buttons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testing_buttons.each do |testing_button| %>
+      <tr>
+        <td><%= link_to 'Show', testing_button %></td>
+        <td><%= link_to 'Edit', edit_testing_button_path(testing_button) %></td>
+        <td><%= link_to 'Destroy', testing_button, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Testing Button', new_testing_button_path %>
