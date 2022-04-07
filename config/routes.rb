@@ -21,3 +21,10 @@ Rails.application.routes.draw do
   resources :synthesized_messages
   
 end
+
+Rails.application.routes.draw do
+
+  get 'get_building_by_customer/:customer_id', to: 'interventions#get_building_by_customer'  
+  get '/building_search' => 'application#building_search'
+
+ end

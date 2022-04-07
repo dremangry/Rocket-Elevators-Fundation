@@ -11,6 +11,155 @@
     </div>
   <% end %>
 
+
+<section class='text-center'>
+
+<h1>Intervention form</h1>
+
+<div class="card card-default">
+      <div class="card-heading card-heading-transparent">
+          <label for="building-type" class="card-title"> 
+              <h3>
+                  <span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 1 |</span> Select customer
+              </h3> 
+          </label>
+      </div>
+      <div class="card-block" style="margin: 20px" id="customer_select">
+          <%= form.select(:customer_id) do %>
+            <option selected>customer</option>
+              <% @customer.each do |l| -%>
+                <option value="<%= l.id %>"><%= l.company_name %></option>
+              <% end %>
+          <% end %>                
+      </div>
+</div>
+
+<div class="card card-default">
+      <div class="card-heading card-heading-transparent">
+          <label for="building-type" class="card-title"> 
+              <h3>
+                  <span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 1 |</span> Select Building
+              </h3> 
+          </label>
+      </div>
+      <div class="card-block" style="margin: 20px" id="building_select">
+          <%= form.select(:building_id) do %>
+            <option selected>building</option>
+              <% @building.each do |l| -%>
+                <option value="<%= l.id %>"><%= l.customer_id %></option>
+              <% end %>
+          <% end %>                
+      </div>
+</div>
+<br>
+<br>
+<div class="card card-default">
+      <div class="card-heading card-heading-transparent">
+          <label for="building-type" class="card-title"> 
+              <h3>
+                  <span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 1 |</span> Select Battery
+              </h3> 
+          </label>
+      </div>
+      <div class="card-block" style="margin: 20px">
+          <%= form.select(:building_id) do %>
+              <% @building.each do |l| -%>
+                <%= content_tag(:option, l.id, value: l.id) %>
+              <% end %>
+          <% end %>                
+      </div>
+</div>
+<br>
+<br>
+<div class="card card-default">
+      <div class="card-heading card-heading-transparent">
+          <label for="building-type" class="card-title"> 
+              <h3>
+                  <span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 1 |</span> Select Column
+              </h3> 
+          </label>
+      </div>
+      <div class="card-block" style="margin: 20px">
+          <%= form.select(:building_id) do %>
+              <% @building.each do |l| -%>
+                <%= content_tag(:option, l.company_name, value: l.id) %>
+              <% end %>
+          <% end %>                
+      </div>
+</div>
+<br>
+<br>
+<div class="card card-default">
+      <div class="card-heading card-heading-transparent">
+          <label for="building-type" class="card-title"> 
+              <h3>
+                  <span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 1 |</span> Select Elevators
+              </h3> 
+          </label>
+      </div>
+      <div class="card-block" style="margin: 20px">
+          <%= form.select(:building_id) do %>
+              <% @building.each do |l| -%>
+                <%= content_tag(:option, l.id, value: l.id) %>
+              <% end %>
+          <% end %>                
+      </div>
+</div>
+<br>
+<br>
+<div class="card card-default">
+      <div class="card-heading card-heading-transparent">
+          <label for="building-type" class="card-title"> 
+              <h3>
+                  <span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 1 |</span> Select Employess
+              </h3> 
+          </label>
+      </div>
+      <div class="card-block" style="margin: 20px">
+          <%= form.select(:building_id) do %>
+              <% @building.each do |l| -%>
+                <%= content_tag(:option, l.id, value: l.id) %>
+              <% end %>
+          <% end %>                
+      </div>
+</div>
+<br>
+<br>
+
+</section>
+
+
+<%# ajax test########################################################## %>
+<div class="row no-gutters wow slideInUp" data-wow-duration="1s">
+  <div class="col-md-12 home-form">
+    <form class="form-inline">
+      <select class="custom-select mb-0 mr-sm-0 mb-sm-0" >
+        <option selected>customer</option>
+        <%= @customer.each do |l| %>
+                <option value="<%= l.id %>"><%= l.company_name %></option>
+        <% end %>
+      </select>
+      <select class="custom-select mb-0 mr-sm-0 mb-sm-0"  >
+        <option selected>building</option>
+        <%= @building.each do |c| %>
+                <option value="<%= c.id %>"><%= c.customer_id %></option>
+        <% end %>
+      </select>
+
+      <select class="custom-select mb-0 mr-sm-0 mb-sm-0">
+        <option selected>Course</option>
+        <%= @building.each do |c| %>
+                <option value="<%= c.id %>"><%= c.address_id %></option>
+        <% end %>
+      </select>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+
+
   <div class="actions">
     <%= form.submit %>
   </div>
