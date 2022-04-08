@@ -20,5 +20,12 @@ class ApplicationController < ActionController::Base
     #         end
     #     end 
     # end
-
+ 
+    def building_search
+        if params[:customer].present? && params[:customer].strip != ""
+            @building = Building.where("customer_id = ?", params[:customer])
+        else
+            @building = Building.all
+        end
+    end
 end

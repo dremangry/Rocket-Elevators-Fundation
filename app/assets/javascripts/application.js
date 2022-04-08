@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery-ui
+//= require AJAX
 //= require rails-ujs
 //= require scripts.js
 //= require activestorage
