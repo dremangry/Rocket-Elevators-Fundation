@@ -8,7 +8,7 @@ set :rbenv_map_bins, %w{rake gem bundle ruby rails puma pumactl}
 set :rbenv_roles, :all # default value
 
 set :application, "MarcAndreRamirez"
-set :repo_url, "https://github.com/dremangry/Rocket_Elevators_Fundation"
+set :repo_url, "https://github.com/dremangry/Rocket-Elevators-Fundation"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
