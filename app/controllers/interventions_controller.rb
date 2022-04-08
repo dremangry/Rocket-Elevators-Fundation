@@ -63,12 +63,11 @@ class InterventionsController < ApplicationController
 
     respond_to do |format|
       if @intervention.save
-        format.html { redirect_to "/", notice: "Thank you. We will communicate with you shortly!" }
-        format.json { render :show, status: :created, location: @intervention }
+        
 
         # attachment_exists = @lead.attached_file_stored_as_binary.attached?
         # user_is_customer = Customer.where(email_of_the_company_contact: "#{@lead.email}").present? || Customer.where(technical_manager_email_for_service: "#{@lead.email}").present?
-        site = RestClient::Resource.new(my_uri, my_key, 'X')
+        # site = RestClient::Resource.new(my_uri, my_key, 'X')
         # client = RestClient::Resource.new
 
         # if attachment_exists
@@ -124,11 +123,11 @@ class InterventionsController < ApplicationController
             
             email: "#{current_user.email}",
             type:"Question"
-          }
+            }
           
           data_json = JSON.generate(data_hash)
-          # site.post(data_json)
-          RestClient::Request.execute(
+          # site.post(data_json, :content_type => 'application/json')
+          request = RestClient::Request.execute(
             method: :post,
             url: my_uri,
             user: my_key,
@@ -136,9 +135,11 @@ class InterventionsController < ApplicationController
             payload: data_json,
             headers: {"Content-Type" => "application/json"},
           )
-
       
 
+          format.html { redirect_to "/", notice: "Thank you. We will communicate with you shortly!" }
+          format.json { render :show, status: :created, location: @intervention }
+        else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @intervention.errors, status: :unprocessable_entity }
       end
