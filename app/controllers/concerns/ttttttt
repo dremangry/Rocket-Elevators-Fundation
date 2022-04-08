@@ -1,0 +1,37 @@
+my_uri = "https://#{ENV['FRESHDESK_DOMAIN']}.freshdesk.com/api/v2/tickets"
+    my_key = ENV['FRESHDESK_API_KEY']
+
+    respond_to do |format|
+      if @intervention.save
+        format.html { redirect_to intervention_url(@intervention), notice: "Intervention was successfully created." }
+        format.json { render :show, status: :created, location: @intervention }
+
+        data_hash = {
+          subject: "New Request Intervention",
+          description: "A new intervention request with the building id of #{@intervention.building_id} the battery id #{@intervention.battery_id},column id #{@intervention.column_id},and elevator id #{@intervention.elevator_id} with the status #{@intervention.status} was filed" ,
+          # email: "#{@intervention.current_user.email}",
+          type: "incident",
+          priority: 1,
+          status: 2,
+          
+        }
+        
+        
+        data_json = JSON.generate(data_hash)
+
+        req = RestClient::Request.execute(
+          method: :post,
+          url: my_uri,
+          user: my_key,
+          payload: data_json,
+          headers: {'Content-Type' => 'application/json'}
+        )
+
+
+
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @intervention.errors, status: :unprocessable_entity }
+      end
+    end
+  
