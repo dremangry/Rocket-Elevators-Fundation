@@ -1,55 +1,36 @@
-# Rocket Elevators: Ruby on Rails <!-- omit in toc -->
+# Rocket Elevators Fundation: Ruby on Rails <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
 
 - [Project Description](#project-description)
-- [Application Requirements](#application-requirements)
-- [Using API to improve website features](#using-api-to-improve-website-features)
+- [Project Requirements](#project-requirements)
 - [Credits](#credits)
 
 ## Project Description
-The main purpose of adding API to a website is to enriched the experience 
+The main purpose of this project is to put in practice everything leadned in the past weeks.
+To try it, log in and click on intervention and create a intervention the information will be displayes in the admin.
 
-## Application Requirements
 
--   [Ruby](https://www.ruby-lang.org/en/downloads/) (v2.7.5)
--   [Rails](https://rubyonrails.org/) (v5.2.6)
+## Project Requirements
 
-## Using API to improve website features
+### 1. A Intervention Request Form and AJAX 
+create the intervention form in the view through a scafold in the terminal and create a js file with the AJAX function in order to display
+the demanded information for a intervention in a dropdown.
 
-### 1. Google Maps
-Google Maps API helps you to bring the power of Google Maps directly on your website. In our case, we use it in our backoffice to show all building location.
+### 2. New "Interventions" Table
+Create a migration with the iformation provided in the documentation for intervention.
 
-To try it, log in and in the administration and click on Map.
+### 3. Creating a Ticket in FreshDesk
+FreshDesk is a usefull tool to make sure to follow up on every contact, no matter the source of this incomming message. In our case, we use it to send a ticket request if you fill the intervention form.
 
-### 2. Twilio
-Twilio supports all forms of communication and can be integreted as an API into your plateform. In our case, we use it to warn the technician we he has to intervene. When the status of an elevator is changed to "Intervention".
+### 4. Creating new GET and PUT requests in the REST API
+Implement the information of put and the get of the rest api through the .net framework (c#) and deploy everything on microsoft azure
 
-To try it, log in and change the status of an elevator to "Intervention".
+To try the API you can create a intervention go on postman paste those endpoint and specify the id
+### GET. https://rocketelevatorsweek8.azurewebsites.net/api/intervention/pending
+### PUT. https://rocketelevatorsweek8.azurewebsites.net/api/intervention/ChangeStatusToInProgress/
+### PUT. https://rocketelevatorsweek8.azurewebsites.net/api/intervention/ChangeStatusToCompleted/
 
-### 3. Slack
-Slack API is able to give record of different activities that occur in the backoffice and inform the right people through the right channel. In our case, we use it to inform operators when an elevator status has changed. It tells the previous and new status of a the specific elevator (ID and serial number). 
-
-To try it, log in and change the status of an elevator.
-
-### 4. DropBox
-DropBox API is able to automated the upload of certains files directly in a file in your cloud account. In our case, we use it to update to the server the file uploaded in the lead form once the contact becomes a customer.
-
-### 5. FreshDesk
-FreshDesk is a usefull tool to make sure to follow up on every contact, no matter the source of this incomming message. In our case, we use it to send a ticket request if you fill the lead form or the quote form.
-
-### 6. Amazon Polly
-Amazon Polly is a service that turns text into realistic speech. In our case, we use that API to add to the Admin dashboard the possibility to start a vocal brifing.
-
-To try it, log in and click on briefing in the administration dashboard.
-
-### 7. Notify
-Notify API connects existing messaging services to make sure to be inform. In our case, an e-mail is send to the relevant person when a form contact is submit
-
-To try it, fill the lead form with your valid e-mail adress. Then, take a look at your mailbox.
-
-### 8. reCAPTCHA
-reCAPTCHA API helps to protect your website form to get spammed or abuse. In our case, we use it to secure the lead form and the quote form. 
 
 You can see it in the lower right corner of the homepage and of the quote page.
 
