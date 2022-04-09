@@ -111,13 +111,13 @@ class InterventionsController < ApplicationController
             priority: 1,
             subject: "#{@intervention.result} from #{@intervention.author}", 
             description: 
-            "The requester #{@intervention.author} started a new intervention
-            for company #{@intervention.customer_id} //
-            On builging ID #{@intervention.building_id} // 
-            On battery ID #{@intervention.battery_id} //
-            On column ID #{@intervention.column_id} //
-            On elevator ID #{@intervention.elevator_id} //
-            Job is done by employee ID #{@intervention.employee_id} //
+            "#{@intervention.author} started a new intervention
+            for company #{@intervention.customer_id},
+            On builging id #{@intervention.building_id},
+            battery id #{@intervention.battery_id},
+            column id #{@intervention.column_id},
+            elevator id #{@intervention.elevator_id},
+            Job is done by employee id #{@intervention.employee_id},
             The job description #{@intervention.report}
               ",
             

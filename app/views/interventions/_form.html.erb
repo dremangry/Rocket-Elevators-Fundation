@@ -16,16 +16,24 @@
 
   <%# ajax########################################################## %>
   <div class="row no-gutters wow slideInUp" data-wow-duration="1s">
-    <div class="col-md-12 home-form text-center">
     <div class = "container">
-      <h3>
-      <span style="color:rgb(10, 101, 160); font-weight:bolder">INTERVENTIONS!!!<br></span> Welcome Employee
-      </h3>
-        <%# <%= form.text_field(:author, :readonly=>true, :value =>@author) %> %>
+    <%# <h1>New Intervention</h1> %>
+      <h1>
+      New intervention
+      <br>
+       Welcome
+      </h1>
+        <%= form.text_field(:author, :readonly=>true, :value =>@author) %>
+        <br>
+        <br>
+        <%# <div class="actions text-center"> %>
+          <%= form.submit %>
+        <%# </div> %>
     </div>
+    <div class="col-md-12 home-form text-center">
       <%# customer section__________________________ %>
       <h3>
-        <span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 1<br></span> Select customer
+        <span style="color: #A90A15; font-weight:bolder">1<br></span> Select customer
       </h3> 
         <select style="max-width: 200px;" id="customer_select" class="custom-select mb-0 mr-sm-0 mb-sm-0"  <%= form.select(:customer_id) do %> >
           <option selected>customer</option>
@@ -41,7 +49,7 @@
         <br>
         <%# building section__________________________ %>
         <h3>
-        <span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 2<br></span> Select building id belonging to customer
+        <span style="color:rgb(10, 101, 160); font-weight:bolder">2<br></span> Select building id belonging to customer
         </h3> 
         <select style="max-width: 150px;" id="building_select" class="custom-select mb-0 mr-sm-0 mb-sm-0" <%= form.select(:building_id) do %> >
           <option selected>building</option>
@@ -57,10 +65,10 @@
         <br>
         <%# batttery section__________________________ %>
         <h3>
-        <span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 3<br></span> Select battery id belonging to building
+        <span style="color: #A90A15; font-weight:bolder">3<br></span> Select battery id belonging to building
         </h3> 
         <select style="max-width: 150px;" id="battery_select" class="custom-select mb-0 mr-sm-0 mb-sm-0" <%= form.select(:battery_id) do %>  >
-          <option selected>select</option>
+          <option selected>battery</option>
           <%= @battery.each do |b| %>
                   <option value="<%= b.id %>"><%= b.id %></option>
           <% end %>
@@ -73,10 +81,10 @@
         <br>
         <%# column section__________________________ %>
         <h3>
-        <span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 4<br></span> Select column id belonging to battery
+        <span style="color:rgb(10, 101, 160); font-weight:bolder">4<br></span> Select column id belonging to battery
         </h3> 
         <select style="max-width: 150px;" id="column_select" class="custom-select mb-0 mr-sm-0 mb-sm-0" <%= form.select(:column_id) do %>  >
-          <option selected>select</option>
+          <option selected>None</option>
           <%= @column.each do |c| %>
                   <option value="<%= c.id %>"><%= c.id %></option>
           <% end %>
@@ -89,10 +97,10 @@
         <br>
         <%# elevator section__________________________ %>
         <h3>
-        <span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 5<br></span> Select elevator id belonging to column
+        <span style="color: #A90A15); font-weight:bolder">5<br></span> Select elevator id belonging to column
         </h3> 
         <select style="max-width: 150px;" id="elevator_select" class="custom-select mb-0 mr-sm-0 mb-sm-0" <%= form.select(:elevator_id) do %> >
-          <option selected>select</option>
+          <option selected>None</option>
           <%= @elevator.each do |e| %>
                   <option value="<%= e.id %>"><%= e.id %></option>
           <% end %>
@@ -108,7 +116,7 @@
         </span> Select employee
         </h3> 
         <select style="max-width: 150px;" id="employee_select" class="custom-select mb-0 mr-sm-0 mb-sm-0" <%= form.select(:employe_id) do %>  >
-          <option selected>select</option>
+          <option selected>None</option>
           <%= @employee.each do |e| %>
                   <option value="<%= e.id %>"><%= e.id %></option>
           <% end %>
@@ -119,19 +127,15 @@
         <br>
         <br>
         <br>
+        
         <div class="form-group ">
           <label for="exampleFormControlTextarea1">INFORMATION</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"<%= form.select(:report) do %> ></textarea>
+          <textarea style="max-width: 400px; margin-left: 750px;" class="form-control" id="exampleFormControlTextarea1" rows="3"<%= form.select(:report) do %>> </textarea>
           <% end %>
         </div>
+
         
     </div>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-
-
 
 <% end %>
